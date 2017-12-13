@@ -94,6 +94,41 @@
 </style>
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<script
+		src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script
+		src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+
+<script type="text/javascript">
+jQuery('.svg').each(function(){
+    var $img = jQuery(this);
+    var imgID = $img.attr('id');
+    var imgClass = $img.attr('class');
+    var imgURL = $img.attr('src');
+
+    jQuery.get(imgURL, function(data) {
+        // Get the SVG tag, ignore the rest
+        var $svg = jQuery(data).find('svg');
+
+        // Add replaced image's ID to the new SVG
+        if(typeof imgID !== 'undefined') {
+            $svg = $svg.attr('id', imgID);
+        }
+        // Add replaced image's classes to the new SVG
+        if(typeof imgClass !== 'undefined') {
+            $svg = $svg.attr('class', imgClass+' replaced-svg');
+        }
+
+        // Remove any invalid XML tags as per http://validator.w3.org
+        $svg = $svg.removeAttr('xmlns:a');
+
+        // Replace image with new SVG
+        $img.replaceWith($svg);
+
+    }, 'xml');
+
+});
+</script>
 
 </head>
 
@@ -143,29 +178,25 @@
   <div id="social">
     <ul>
       <li class="facebook">
-        <button class="border"><i class="fa fa-facebook"></i></button>
+        <button class="border"><img class="svg" src="icons/facebook.svg" alt="facebook"></button>
       </li>
 
       <li class="twitter">
-        <button class="border"><i class="fa fa-twitter"></i></button>
+        <button class="border"><img class="svg" src="icons/twitter.svg" alt="twitter"></button>
       </li>
 
       <li class="github">
-        <button class="border"><i class="fa fa-github"></i></button>
+        <button class="border"><img class="svg" src="icons/github.svg" alt="github"></button>
       </li>
 
       <li class="linkedin">
-        <button class="border"><i class="fa fa-linkedin"></i></button>
+        <button class="border"><img class="svg" src="icons/linkedin.svg" alt="linkedIn"></button>
       </li>
     </ul>
   </div>
 </div>
 	</section>
-	<script
-		src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-	<script
-		src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
-
+	
 	<script src="js/index.js"></script>
 	<script src="js/header.js"></script>
 </body>

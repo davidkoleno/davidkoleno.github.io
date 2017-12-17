@@ -1,0 +1,322 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #ffffff;
+  color: #333333;
+}
+
+.falseHeader {
+  background: #333333;
+  display: block;
+  position: relative;
+  height: 100px;
+  width: 100%;
+  z-index: 16;
+  transition: height 0.2s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.menuContainer {
+  display: block;
+  width: 800px;
+  margin: 0 auto;
+  z-index: 10;
+}
+
+.menu {
+  line-height: 100px;
+  transition: all 0.2s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+}
+
+.menu ul li {
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  width: 25%;
+  font-family: roboto;
+  color: #00b205;
+  font-size: 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.menu ul li:hover {
+  background: #fff;
+  color: #333333;
+}
+
+.menu > ul > li .subChoices {
+  transform: translateY(-25%);
+  cursor-event: none;
+  width: 200px;
+  position: absolute;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.25s cubic-bezier(0.55, 0, 0.1, 1);
+  opacity: 0;
+}
+
+.menu > ul > li .subChoices li {
+  font-size: 15px;
+  line-height: 60px;
+  display: block;
+  width: 100%;
+  color: #333333;
+  background: #fff;
+}
+
+.menu > ul > li .subChoices li:hover {
+  background: #333333;
+  color: #00b205;
+}
+
+.menu > ul > li:hover .subChoices {
+  transform: translate(0);
+  opacity: 1;
+}
+
+.menu a{
+	display: block;
+}
+
+.menu a:link {
+    color: #00b205; 
+    text-decoration: none;
+}
+
+.menu a:visited {
+    color: #00b205;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #333333;
+    text-decoration: none;
+}
+
+.menu a:active {
+    color: #333333;
+    text-decoration: none;
+}
+
+#firstSect .container {
+  margin-top: 200px;
+}
+
+#firstSect .container h1 {
+  font-size: 30px;
+}
+
+#mainTitle {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.foot{
+	color: #ffffff;
+	background: #333333;
+}
+.footer {
+	color: #ffffff;
+	background: #333333;
+	position: absolute;
+  	right: 0;
+  	bottom: 0;
+  	left: 0;	
+}
+.center {
+  display: table;
+  width: 100%;
+}
+
+#social {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#social ul {
+  text-align: center;
+  padding-left: 0px;
+}
+
+#social li {
+  list-style-type: none;
+  text-align: center;
+  display: inline-block;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#social li:first-child {
+  margin-left: 0px;
+}
+
+#social li:last-child {
+  margin-right: 0px;
+}
+
+
+
+.facebook {
+  width: 50px;
+  height: 50px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.facebook .border {
+  background: transparent;
+  outline: none;
+  color: rgba(255, 255, 255, 0.3);
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all .2s ease-in-out;
+}
+
+.facebook .border:hover {
+  background: #3b5998;
+  border-color: #436aaf;
+  color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.2);
+}
+
+.facebook .svg {
+  color:#ffffff;
+  width:25px;
+  height:25px;
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.facebook .svg:hover {
+  color:#000000;
+}
+
+
+
+.twitter {
+  width: 50px;
+  height: 50px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.twitter .border {
+  background: transparent;
+  outline: none;
+  color: rgba(255, 255, 255, 0.3);
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all .2s ease-in-out;
+}
+
+.twitter .border:hover {
+  background: #00aced;
+  border-color: #72c6e6;
+  color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.2);
+}
+
+.twitter .svg {
+  color: #000000;
+  width:25px;
+  height:25px;
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+
+
+.github {
+  width: 50px;
+  height: 50px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.github .border {
+  background: transparent;
+  outline: none;
+  color: rgba(255, 255, 255, 0.3);
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all .2s ease-in-out;
+}
+
+.github .border:hover {
+  background: #6e5494;
+  border-color: #7495af;
+  color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.2);
+}
+
+.github .svg {
+  color: #000000;
+  width:25px;
+  height:25px;
+  -ms-transform: rotate(-45deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-45deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(-45deg);
+}
+
+
+
+.linkedin {
+  width: 50px;
+  height: 50px;
+  -ms-transform: rotate(45deg);
+  /* IE 9 */
+  -webkit-transform: rotate(45deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+}
+
+.linkedin .border {
+  background: transparent;
+  outline: none;
+  color: rgba(255, 255, 255, 0.3);
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all .2s ease-in-out;
+}
+
+.linkedin .border:hover {
+  background: #0077b5;
+  border-color: #00a0dc;
+  color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.2);
+}
+
+.linkedin .svg {
+	fill: #ffffff;
+  width:25px;
+  height:25px;
+  -ms-transform: rotate(-45deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-45deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(-45deg);
+}
+
